@@ -2,44 +2,20 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 func main() {
-	rootURL := "https://www.boot.dev"
-	rawHTML := `
-<html>
-	<body>
-		<a href="/path/one">
-			<span>Boot.dev</span>
-		</a>
-		<a href="https://other.com/path/one">
-			<span>Boot.dev</span>
-		</a>
-	</body>
-</html>`
+	if len(os.Args) < 2 {
+		fmt.Println("no website provided")
+		os.Exit(1)
+	}
+	if len(os.Args) > 2 {
+		fmt.Println("too many arguments provided")
+		os.Exit(1)
+	}
 
-	readHTMLandPrintURLs(rawHTML, rootURL)
+	rawBaseURL := os.Args[1]
 
-rawHTML = `
-<html>
-	<body>
-		<h1>This is a test</h1>
-		<a href="/testity/test/test">Test</a>
-	</html>
-</body>`
-
-	readHTMLandPrintURLs(rawHTML, rootURL)
-}
-
-func readHTMLandPrintURLs(html, rootURL string) {
-	anchorTags, err := getURLsFromHTML(html, rootURL) 
-		if err != nil {
-			fmt.Printf("Error: %v\n", err)
-		}
-
-		fmt.Printf("Found %d urls in html\n", len(anchorTags))
-
-		for i, tag := range anchorTags {
-			fmt.Printf("anchorTag[%d] = %s\n", i, tag)
-		}
+	fmt.Printf("starting crawl of: %s\n", rawBaseURL) 
 }
