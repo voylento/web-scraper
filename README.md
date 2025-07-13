@@ -15,13 +15,13 @@ go run . "https://www.wagslane.dev" 5 250
 produces the report below:
 
 ===================================<br>
-REPORT for https://www.wagslane.dev
+REPORT for https://www.wagslane.dev<br>
 ===================================<br>
-Found 63 internal links to www.wagslane.dev
-Found 62 internal links to www.wagslane.dev/about
-Found 62 internal links to www.wagslane.dev/index.xml
-Found 62 internal links to www.wagslane.dev/tags
-Found 5 internal links to www.wagslane.dev/posts/leave-scrum-to-rugby
+Found 63 internal links to www.wagslane.dev<br>
+Found 62 internal links to www.wagslane.dev/about<br>
+Found 62 internal links to www.wagslane.dev/index.xml<br>
+Found 62 internal links to www.wagslane.dev/tags<br>
+Found 5 internal links to www.wagslane.dev/posts/leave-scrum-to-rugby<br>
 ...
 
 
