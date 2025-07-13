@@ -14,12 +14,9 @@ go run . "https://www.wagslane.dev" 5 250
 
 produces the report below:
 
-=================================================
-CRAWL COMPLETE
-=================================================
-========================================
+===================================<br>
 REPORT for https://www.wagslane.dev
-========================================
+===================================<br>
 Found 63 internal links to www.wagslane.dev
 Found 62 internal links to www.wagslane.dev/about
 Found 62 internal links to www.wagslane.dev/index.xml
